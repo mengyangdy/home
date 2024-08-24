@@ -9,13 +9,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dayjs": "^1.11.13",
     "pinia": "^2.2.2",
+    "sass": "^1.77.8",
     "vue": "^3.4.37"
   },
   "devDependencies": {
+    "@unocss/transformer-directives": "^0.62.2",
+    "@unocss/transformer-variant-group": "^0.62.2",
     "@vitejs/plugin-vue": "^5.1.2",
+    "@vitejs/plugin-vue-jsx": "^4.0.1",
     "typescript": "^5.5.3",
+    "unocss": "^0.62.2",
     "vite": "^5.4.1",
+    "vite-plugin-progress": "^0.0.7",
     "vue-tsc": "^2.0.29"
   }
 }
