@@ -12,6 +12,6 @@ async function setupApp() {
   setTimeout(()=>{
     app.mount("#app");
 
-  },100000000)
+  },2000)
 }
 setupApp();

@@ -9,8 +9,6 @@ export default defineConfig<Theme>({
       exclude:['node_modules','dist']
     }
   },
-  theme:{
-  },
   shortcuts: [
     {
       'flex-center': 'flex justify-center items-center',

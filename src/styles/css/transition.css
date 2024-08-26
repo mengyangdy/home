@@ -15,3 +15,23 @@
     transform: rotate(-360deg);
   }
 }
+
+@keyframes fade-blur-in {
+  from {
+    filter: blur(20px) brightness(0.3);
+    transform: scale(1.6);
+  }
+  to {
+    filter: blur(0) brightness(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-blur-main-in {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}

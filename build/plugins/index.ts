@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import progress from 'vite-plugin-progress';
 import { setupHtmlPlugin } from "./html";
-
+import { setupUnplugin } from "./unplugin";
 
 
 export function setupVitePlugins(buildTime:string){
@@ -13,7 +13,8 @@ export function setupVitePlugins(buildTime:string){
     vueJsx(),
     setupUnocss(),
     progress(),
-    setupHtmlPlugin(buildTime)
+    setupHtmlPlugin(buildTime),
+    setupUnplugin()
   ]
 
   return plugins
