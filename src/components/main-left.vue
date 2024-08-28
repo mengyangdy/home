@@ -1,6 +1,6 @@
 <template>
   <div>
-
+    <LeftMessage/>
   </div>
 </template>
 

@@ -10,7 +10,8 @@ declare module 'vue' {
     Background: typeof import('./../components/background.vue')['default']
     Footer: typeof import('./../components/footer.vue')['default']
     Left: typeof import('./../components/main/left.vue')['default']
-    Loading: typeof import('./../components/loading.vue')['default']
+    LeftMessage: typeof import('./../components/left-message.vue')['default']
+    MainLeft: typeof import('./../components/main-left.vue')['default']
     Message: typeof import('./../components/message.vue')['default']
     NMessageProvider: typeof import('naive-ui')['NMessageProvider']
   }

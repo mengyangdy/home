@@ -47,7 +47,8 @@ export default defineConfig<Theme>({
     },
     {
       'nowrap-hidden': 'overflow-hidden whitespace-nowrap',
-      'ellipsis-text': 'nowrap-hidden text-ellipsis'
+      'ellipsis-text': 'nowrap-hidden text-ellipsis',
+      ''
     }
   ],
   transformers:[transformerDirectives(),transformerVariantGroup()],
