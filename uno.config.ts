@@ -48,7 +48,9 @@ export default defineConfig<Theme>({
     {
       'nowrap-hidden': 'overflow-hidden whitespace-nowrap',
       'ellipsis-text': 'nowrap-hidden text-ellipsis',
-      ''
+    },
+    {
+      'animation-fade':'animate-name-fade animate-duration-500'
     }
   ],
   transformers:[transformerDirectives(),transformerVariantGroup()],

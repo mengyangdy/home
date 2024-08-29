@@ -26,7 +26,6 @@ import {Error} from "@icon-park/vue-next";
 const message = useMessage()
 
 const appStore = useAppStore()
-console.log("=>(background.vue:29) appStore", appStore.bgShow);
 const bgUrl = ref<string | null>(null)
 
 
@@ -39,8 +38,7 @@ onMounted(() => {
 
 function changeBg(type: string) {
   if (type === '0') {
-    bgUrl.value = `/src/assets/images/background${bgRandom}.jpg`
-    console.log("=>(background.vue:43) bgUrl", bgUrl.value);
+    bgUrl.value = `/images/background${bgRandom}.jpg`
   } else if (type === '1') {
     bgUrl.value = "https://api.dujin.org/bing/1920.php";
   } else if (type === '2') {
@@ -61,7 +59,7 @@ const imgLoadComplete = () => {
 }
 
 // 图片加载失败
-const imgLoadError = () => {
+const imgLoadError = (err) => {
   message.error(
       '壁纸加载失败，已切换默认壁纸', {
         icon: () => h(NIcon, null, {default: () => h(Error)})

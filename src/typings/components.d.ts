@@ -9,10 +9,18 @@ declare module 'vue' {
   export interface GlobalComponents {
     Background: typeof import('./../components/background.vue')['default']
     Footer: typeof import('./../components/footer.vue')['default']
+    FuncArea: typeof import('./../components/func-area.vue')['default']
     Left: typeof import('./../components/main/left.vue')['default']
     LeftMessage: typeof import('./../components/left-message.vue')['default']
     MainLeft: typeof import('./../components/main-left.vue')['default']
+    MainRight: typeof import('./../components/main-right.vue')['default']
     Message: typeof import('./../components/message.vue')['default']
+    MusicModule: typeof import('./../components/music-module.vue')['default']
+    NGi: typeof import('naive-ui')['NGi']
+    NGrid: typeof import('naive-ui')['NGrid']
     NMessageProvider: typeof import('naive-ui')['NMessageProvider']
+    PoetryModule: typeof import('./../components/poetry-module.vue')['default']
+    SiteLink: typeof import('./../components/site-link.vue')['default']
+    SocialLinks: typeof import('./../components/social-links.vue')['default']
   }
 }

@@ -4,8 +4,6 @@ import { getBuildTime } from "./build/config";
 import { URL, fileURLToPath } from 'node:url';
 
 export default defineConfig((configEnv) => {
-  console.log(configEnv, "configEnv");
-
   const viteEnv = loadEnv(
     configEnv.mode,
     process.cwd()

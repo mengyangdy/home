@@ -1,26 +1,25 @@
 <template>
   <div>
-    <div class="flex flex-row items-center max-w-460px animate-name-fade animate-duration-500">
-      <img :src="appLogo" alt="logo" class="rounded-50% w-120px">
-      <div class="w-full pl-22px translate-y--8px text-pacifico overflow-hidden whitespace-nowrap text-ellipsis">
-        <span>{{ siteUrl[0] }}</span>
-        <span>{{ siteUrl[1] }}</span>
+    <div class="flex flex-row items-center max-w-560px animate-name-fade animate-duration-500 ">
+      <img :src="`${appLogo}`" alt="logo" class="rounded-50% w-120px">
+      <div class="w-full pl-22px translate-y--8px text-pacifico overflow-hidden whitespace-nowrap text-ellipsis h-132px">
+        <span class="text-5rem">{{ siteUrl[0] }}</span>
+        <span class="ml-6px text-2rem">{{ siteUrl[1] }}</span>
       </div>
     </div>
-    <div @click="changeBox">
-      <div>
+    <div class="cards p-1rem mt-3rem max-w-460px animate-name-fade animate-duration-500" @click="changeBox">
+      <div class="flex justify-between">
         <Icon size="16">
           <QuoteLeft/>
         </Icon>
         <Transition name="fade" mode="out-in">
-          <div>
-            <p></p>
-            <p></p>
+          <div :key="descText.hello + descText.text" class="m-x-1rem m-y-0.75rem leading-2rem mr-auto transition-property-opacity transition-duration-200" >
+            <p class="text-pacifico">{{descText.hello}}</p>
+            <p>{{descText.text}}</p>
           </div>
         </Transition>
-        <Icon size="16">
+        <Icon size="16" class="self-end">
           <QuoteRight/>
-
         </Icon>
       </div>
     </div>
@@ -37,9 +36,7 @@ import {computed, h, reactive} from "vue";
 import {NIcon} from "naive-ui";
 
 const appStore = useAppStore()
-
 const appLogo = import.meta.env.VITE_APP_MAIN_LOGO
-console.log("=>(left-message.vue:42) appLogo", appLogo);
 const siteUrl = computed(() => {
   const url = import.meta.env.VITE_APP_URL
   if (!url) return 'imsyy.top'.split('.')
@@ -51,7 +48,6 @@ const siteUrl = computed(() => {
   }
   return url.split('.')
 })
-console.log("=>(left-message.vue:43) siteUrl", siteUrl);
 
 
 const descText = reactive({
